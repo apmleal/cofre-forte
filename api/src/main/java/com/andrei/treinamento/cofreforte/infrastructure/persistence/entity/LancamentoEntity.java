@@ -23,19 +23,19 @@ public class LancamentoEntity extends EntityBase {
         @Column(nullable = false, precision = 19, scale = 2)
         private BigDecimal valor;
 
-        @Enumerated(EnumType.STRING)
-        @Column(nullable = false)
-        private TipoLancamento tipo;
+//        @Enumerated(EnumType.STRING)
+//        @Column(nullable = false)
+//        private TipoLancamento tipo;
 
-        @Enumerated(EnumType.STRING)
-        private CategoriaLancamento categoria;
+//        @Enumerated(EnumType.STRING)
+//        private CategoriaLancamento categoria;
 
         @Column(name = "data_lancamento", nullable = false)
         private LocalDate dataLancamento;
 
-        @Enumerated(EnumType.STRING)
-        @Column(nullable = false)
-        private StatusLancamento status;
+//        @Enumerated(EnumType.STRING)
+//        @Column(nullable = false)
+//        private StatusLancamento status;
 
         @Column(name = "caixinha_origem_id")
         private UUID caixinhaOrigemId;
