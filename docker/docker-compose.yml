@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  db:
+    image: bitnami/postgresql:latest
+    container_name: cofre_forte_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db_cofre_forte
+    ports:
+      - "9902:5432"
+    volumes:
+      - "pgdata:/var/lib/postgresql"
+    networks:
+      - cofreforte
+
+volumes:
+  pgdata:
+    driver: local
+
+networks:
+  cofreforte:
+    name: cofreforte.networks
