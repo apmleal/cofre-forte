@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.andrei.treinamento</groupId>
-    <artifactId>cofreforte</artifactId>
+    <artifactId>caixaforte</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cofre-forte</name>
-    <description>cofre-forte</description>
+    <name>caixa-forte</name>
+    <description>caixa-forte</description>
     <properties>
         <java.version>21</java.version>
     </properties>
