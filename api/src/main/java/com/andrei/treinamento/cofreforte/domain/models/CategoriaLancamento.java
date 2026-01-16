@@ -1,4 +1,4 @@
-package com.andrei.treinamento.cofreforte.domain;
+package com.andrei.treinamento.cofreforte.domain.models;
 
 public enum CategoriaLancamento {
     SALARIO,

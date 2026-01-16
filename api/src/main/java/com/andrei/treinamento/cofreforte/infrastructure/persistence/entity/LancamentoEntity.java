@@ -1,10 +1,11 @@
 package com.andrei.treinamento.cofreforte.infrastructure.persistence.entity;
 
-import com.andrei.treinamento.cofreforte.domain.CategoriaLancamento;
-import com.andrei.treinamento.cofreforte.domain.StatusLancamento;
-import com.andrei.treinamento.cofreforte.domain.TipoLancamento;
+import com.andrei.treinamento.cofreforte.domain.models.CategoriaLancamento;
+import com.andrei.treinamento.cofreforte.domain.models.StatusLancamento;
+import com.andrei.treinamento.cofreforte.domain.models.TipoLancamento;
 import com.andrei.treinamento.cofreforte.infrastructure.core.persistence.EntityBase;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -13,6 +14,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tb_lancamentos")
+@Data
 public class LancamentoEntity extends EntityBase {
 
         @Id

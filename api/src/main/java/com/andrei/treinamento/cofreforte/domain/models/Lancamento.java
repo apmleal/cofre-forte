@@ -1,4 +1,4 @@
-package com.andrei.treinamento.cofreforte.domain;
+package com.andrei.treinamento.cofreforte.domain.models;
 
 import lombok.Getter;
 
@@ -18,7 +18,7 @@ public class Lancamento {
     private StatusLancamento status;
     private UUID caixinhaOrigemId;
     private UUID caixinhaDestinoId;
-    private final LocalDateTime criadoEm;
+    private LocalDateTime criadoEm;
 
     private Lancamento(
             UUID id,
@@ -94,5 +94,32 @@ public class Lancamento {
         if (dataLancamento == null) {
             throw new IllegalArgumentException("Data obrigatória");
         }
+    }
+
+    public static Lancamento reconstruir(
+            UUID id,
+            String descricao,
+            Dinheiro valor,
+            TipoLancamento tipo,
+            CategoriaLancamento categoria,
+            LocalDate dataLancamento,
+            StatusLancamento status,
+            UUID caixinhaOrigemId,
+            UUID caixinhaDestinoId,
+            LocalDateTime criadoEm
+    ) {
+        Lancamento lancamento = new Lancamento(
+                id,
+                descricao,
+                valor,
+                tipo,
+                categoria,
+                dataLancamento,
+                caixinhaOrigemId,
+                caixinhaDestinoId
+        );
+        lancamento.status = status;
+        lancamento.criadoEm = criadoEm;
+        return lancamento;
     }
 }
